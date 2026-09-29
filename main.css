@@ -69,7 +69,7 @@ nav {
 .header-links a {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     font-size: 13px;
     color: #f8f7f5;
@@ -256,6 +256,7 @@ span-1 {
     margin-top: 32px;
     padding: 0 6%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     overflow-x: auto;
 }
@@ -263,7 +264,7 @@ span-1 {
 .hymn p {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 600;
     font-style: normal;
     font-size: 11px;
     color: #1f4d3a;
@@ -279,18 +280,25 @@ span-1 {
     padding-left: 10px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 700;
     font-style: normal;
     font-size: 14px;
     color: #1f4d3a;
 }
 
-.hymn .text > div {
+.hymn .text>div:not(.numbers),
+.numbers>div {
     white-space: nowrap;
     padding: 0 10px 6px;
     box-sizing: border-box;
     min-height: 30px;
     border-bottom: 0.5px solid #1f4d3a;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .hymn .text {
@@ -299,16 +307,136 @@ span-1 {
     padding-left: 0;
 }
 
-.hymn .text:nth-child(3) > div {
+.hymn .text:nth-child(3)>div {
     padding-right: 250px;
+}
+
+.hymn .text:last-child>div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.hymn .text:nth-child(4) a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hymn .text:nth-child(4) a+a {
+    margin-left: 6px;
+}
+
+.featured-hymn {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    color: #1f4d3a;
+}
+
+.num-but {
+    background: #F5F4F1;
+    border: 1px solid black;
+    border-radius: 6px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 13px;
+    color: #1f4d3a;
+}
+
+.number-controls {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
 }
 
 /*Footer*/
 
+.line {
+    border: 0.5px solid #1f4d3a;
+}
+
 .footer {
     background-color: #f8f7f5;
     position: relative;
+    padding: 0 6%;
     height: 100px;
-    margin-top: -100px;
+    /* margin-top: -100px; */
     clear: both;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-brand h5 {
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #1f4d3a;
+}
+
+.footer-brand span-1 {
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #1f4d3a;
+}
+
+.footer-brand img {
+    transform: translateY(-18px);
+}
+
+.footer-actions {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    flex-shrink: 1;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-links a {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 13px;
+    color: #1f4d3a;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.footer-text p {
+    font-family: "Noto Serif Georgian", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 13px;
+    color: #1f4d3a
 }
