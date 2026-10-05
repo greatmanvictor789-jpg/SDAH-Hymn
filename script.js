@@ -40,6 +40,24 @@ function createPageButton(page) {
     return button;
 }
 
+function createPageEllipsis(nextPage) {
+    var button = document.createElement("button");
+    button.className = "num-but";
+    button.type = "button";
+    button.textContent = "...";
+    button.setAttribute("aria-label", "Show pages from " + nextPage);
+    button.addEventListener("click", function () {
+        expandedPages = true;
+        renderPageButtons();
+
+        var targetButton = pageNumbers.querySelector('[aria-label="Page ' + nextPage + '"]');
+        pageNumbers.scrollLeft +=
+            targetButton.getBoundingClientRect().left - pageNumbers.getBoundingClientRect().left;
+    });
+
+    return button;
+}
+
 function renderPageButtons() {
     pageNumbers.replaceChildren();
 
@@ -72,16 +90,7 @@ function renderPageButtons() {
         var previousPage = collapsedPages[pageIndex - 1];
 
         if (pageIndex > 0 && currentPage - previousPage > 1) {
-            var ellipsis = document.createElement("button");
-            ellipsis.className = "num-but";
-            ellipsis.type = "button";
-            ellipsis.textContent = "...";
-            ellipsis.setAttribute("aria-label", "Show all pages");
-            ellipsis.addEventListener("click", function () {
-                expandedPages = true;
-                renderPageButtons();
-            });
-            pageNumbers.appendChild(ellipsis);
+            pageNumbers.appendChild(createPageEllipsis(previousPage + 1));
         }
 
         pageNumbers.appendChild(createPageButton(currentPage));
