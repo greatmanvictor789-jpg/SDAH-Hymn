@@ -234,6 +234,11 @@ span-1 {
     color: #1f4d3a;
 }
 
+.bot:hover {
+    background: #1f4d3a;
+    color: #f8f7f5;
+}
+
 .hero p {
     margin-left: 50px;
     font-family: "Inter", sans-serif;
@@ -341,6 +346,7 @@ span-1 {
     border-radius: 6px;
     width: 30px;
     height: 30px;
+    flex-shrink: 0;
     padding: 0;
     cursor: pointer;
     font-family: "Inter", sans-serif;
@@ -351,12 +357,32 @@ span-1 {
     color: #1f4d3a;
 }
 
+.num-but:hover {
+    background: #1f4d3a;
+    color: #f8f7f5;
+}
+
 .number-controls {
     flex: 0 0 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 16px;
+    margin-top: 26px;
+}
+
+.number-pages {
+    display: flex;
+    flex: 0 1 280px;
+    gap: 10px;
+    max-width: calc(100% - 80px);
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.number-pages::-webkit-scrollbar {
+    display: none;
 }
 
 /*Footer*/
