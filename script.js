@@ -1,11 +1,24 @@
-var numbersContainer = document.querySelector(".numbers");
-var hymnCount = document.querySelectorAll(".hymn .text:nth-child(2) > div").length - 1;
+document.querySelectorAll(".hymn-row").forEach(function (row, index) {
+    row.querySelector(".hymn-number").textContent = index + 1;
+});
 
-for (var number = 1; number <= hymnCount; number++) {
-    var numberRow = document.createElement("div");
-    numberRow.textContent = number;
-    numbersContainer.appendChild(numberRow);
-}
+document.querySelectorAll(".hymn-actions-toggle").forEach(function (button) {
+    button.addEventListener("click", function () {
+        var row = button.closest(".hymn-row");
+        var isOpen = row.classList.toggle("is-open");
+        button.setAttribute("aria-expanded", isOpen);
+    });
+});
+
+var rangeContainer = document.querySelector(".hymn-ranges");
+var rangeToggle = rangeContainer.querySelector(".range-more");
+
+rangeToggle.addEventListener("click", function () {
+    var isExpanded = rangeContainer.classList.toggle("is-expanded");
+    rangeContainer.classList.toggle("is-collapsed", !isExpanded);
+    rangeToggle.setAttribute("aria-expanded", isExpanded);
+    rangeToggle.textContent = isExpanded ? "Less" : "More";
+});
 
 var pageControls = document.querySelector(".number-controls");
 var pageNumbers = pageControls.querySelector(".number-pages");
@@ -14,7 +27,6 @@ var totalPages = 695;
 var visiblePageCount = 5;
 var firstVisiblePage = 1;
 var selectedPage = 1;
-var expandedPages = false;
 
 function createPageButton(page) {
     var button = document.createElement("button");
@@ -33,7 +45,6 @@ function createPageButton(page) {
             Math.max(1, page - Math.floor(visiblePageCount / 2)),
             totalPages - visiblePageCount + 1
         );
-        expandedPages = false;
         renderPageButtons();
     });
 
@@ -47,12 +58,8 @@ function createPageEllipsis(nextPage) {
     button.textContent = "...";
     button.setAttribute("aria-label", "Show pages from " + nextPage);
     button.addEventListener("click", function () {
-        expandedPages = true;
+        firstVisiblePage = nextPage;
         renderPageButtons();
-
-        var targetButton = pageNumbers.querySelector('[aria-label="Page ' + nextPage + '"]');
-        pageNumbers.scrollLeft +=
-            targetButton.getBoundingClientRect().left - pageNumbers.getBoundingClientRect().left;
     });
 
     return button;
@@ -60,13 +67,6 @@ function createPageEllipsis(nextPage) {
 
 function renderPageButtons() {
     pageNumbers.replaceChildren();
-
-    if (expandedPages) {
-        for (var page = 1; page <= totalPages; page++) {
-            pageNumbers.appendChild(createPageButton(page));
-        }
-        return;
-    }
 
     var lastVisiblePage = Math.min(firstVisiblePage + visiblePageCount - 1, totalPages);
     var collapsedPages = [];
@@ -98,21 +98,11 @@ function renderPageButtons() {
 }
 
 pageArrows[0].addEventListener("click", function () {
-    if (expandedPages) {
-        pageNumbers.scrollBy({ left: -pageNumbers.clientWidth * 0.75, behavior: "smooth" });
-        return;
-    }
-
     firstVisiblePage = Math.max(1, firstVisiblePage - 1);
     renderPageButtons();
 });
 
 pageArrows[1].addEventListener("click", function () {
-    if (expandedPages) {
-        pageNumbers.scrollBy({ left: pageNumbers.clientWidth * 0.75, behavior: "smooth" });
-        return;
-    }
-
     firstVisiblePage = Math.min(
         totalPages - visiblePageCount + 1,
         firstVisiblePage + 1
@@ -121,3 +111,25 @@ pageArrows[1].addEventListener("click", function () {
 });
 
 renderPageButtons();
+
+var menuToggle = document.querySelector(".menu-toggle");
+var menuLinksContainer = document.querySelector("#site-menu");
+var menuLinks = menuLinksContainer.querySelectorAll("a");
+
+function closeMenu() {
+    menuToggle.classList.remove("is-open");
+    menuLinksContainer.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+}
+
+menuToggle.addEventListener("click", function () {
+    var isOpen = menuToggle.classList.toggle("is-open");
+    menuLinksContainer.classList.toggle("is-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+});
+
+menuLinks.forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+});

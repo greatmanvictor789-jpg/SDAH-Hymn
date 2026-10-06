@@ -21,13 +21,11 @@
             <h5>Seventh-day <br><span-1>Adventist Hymnal</span-1></h5>
         </div>
         <div class="nav-actions">
-            <div class="header-links">
+            <div class="header-links" id="site-menu">
                 <a href="index.html">Home</a>
                 <a href="#">About</a>
                 <a href="#">Resources</a>
             </div>
-            <a class="search-link" href="#"><img src="search_icon_f8f7f5_transparent.png" alt="search-icon" width="25px"
-                    height="25px"></a>
         </div>
         <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-menu"
             aria-expanded="false">
@@ -53,92 +51,151 @@
     <div class="container">
         <div class="main">
             <section class="hero">
-                <button class="but">All Hymns</button>
-                <button class="bot">1-50</button>
-                <button class="bot">51- 100</button>
-                <button class="bot">101- 150</button>
-                <button class="bot">151- 200</button>
-                <button class="bot">201- 250</button>
-                <button class="bot">251- 300</button>
-                <button class="bot">301- 350</button>
-                <button class="bot">351- 400</button>
-                <button class="bot">more </button>
-                <p>Sort by</p>
-                <button class="bot">Number (Asc)</button>
+                <div class="hymn-ranges is-collapsed">
+                    <button class="but range-option" type="button">All Hymns</button>
+                    <button class="bot range-option" type="button">1-50</button>
+                    <button class="bot range-option" type="button">51- 100</button>
+                    <button class="bot range-option" type="button">101- 150</button>
+                    <button class="bot range-option" type="button">151- 200</button>
+                    <button class="bot range-option" type="button">201- 250</button>
+                    <button class="bot range-option" type="button">251- 300</button>
+                    <button class="bot range-option" type="button">301- 350</button>
+                    <button class="bot range-option" type="button">351- 400</button>
+                    <button class="bot range-more" type="button" aria-expanded="false">More</button>
+                </div>
+                <p class="sort-label">Sort by</p>
+                <button class="bot sort-button" type="button">Number (Asc)</button>
                 <p class="text">695 hymns</p>
             </section>
 
-            <section class="hymn">
-                <div class="text">
-                    <div>
-                        <p>NO.</p>
+            <section class="hymn" aria-label="Hymn list">
+                <div class="hymn-list">
+                    <div class="hymn-headings" aria-hidden="true">
+                        <span>NO.</span>
+                        <span>TITLE</span>
+                        <span>FIRST LINE</span>
+                        <span>ACTIONS</span>
                     </div>
-                    <div class="numbers"></div>
-                </div>
-                <div class="text">
-                    <div>
-                        <p>TITLE</p>
-                    </div>
-                    <div>Praise to the Lord</div>
-                    <div>All Creatures of Our God and King</div>
-                    <div>God Himself is With Us</div>
-                    <div>Praise, My Soul, the King of Heaven</div>
-                    <div>All My Hope on God is Founded</div>
-                    <div>O Worship the lord</div>
-                    <div>The Lord in Zion Reigneth</div>
-                    <div>Praise God, From Whom All Blessing Flow</div>
-                    <div>Let All Things Now Living</div>
-                    <div>Come, Christians, Join to Sing</div>
-                </div>
-                <div class="text">
-                    <div>
-                        <p>FIRST LINE</p>
-                    </div>
-                    <div class="featured-hymn">Praise to the Lord, the Almighty,</div>
-                    <div class="featured-hymn">All creatures of our God and King,</div>
-                    <div class="featured-hymn">God Himself is with us;</div>
-                    <div class="featured-hymn">Praise, my soul, the King of heaven;</div>
-                    <div class="featured-hymn">All my hope on God is founded;</div>
-                    <div class="featured-hymn">O worship the Lord in the beauty of holiness;</div>
-                    <div class="featured-hymn">The Lord in Zion reigneth,</div>
-                    <div class="featured-hymn">Praise God, from whom all blessings flow;</div>
-                    <div class="featured-hymn">Let all things now living</div>
-                    <div class="featured-hymn">Come, Christians, join to sing</div>
-                </div>
-                <div class="text">
-                    <div>
-                        <p>ACTIONS</p>
-                    </div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
-                    <div><a href="#"><img src="icons8-open-book-50.png" alt="book-img" width="20px" height="20px">
-                            View</a> <a href="#"><img src="icons8-share-48.png" alt="share-img" width="20px"
-                                height="20px"> Share</a></div>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>Praise to the Lord</h2>
+                            <p class="featured-hymn">Praise to the Lord, the Almighty,</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for Praise to the Lord" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View Praise to the Lord"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share Praise to the Lord"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>All Creatures of Our God and King</h2>
+                            <p class="featured-hymn">All creatures of our God and King,</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for All Creatures of Our God and King" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View All Creatures of Our God and King"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share All Creatures of Our God and King"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>God Himself is With Us</h2>
+                            <p class="featured-hymn">God Himself is with us;</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for God Himself is With Us" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View God Himself is With Us"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share God Himself is With Us"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>Praise, My Soul, the King of Heaven</h2>
+                            <p class="featured-hymn">Praise, my soul, the King of heaven;</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for Praise, My Soul, the King of Heaven" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View Praise, My Soul, the King of Heaven"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share Praise, My Soul, the King of Heaven"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>All My Hope on God is Founded</h2>
+                            <p class="featured-hymn">All my hope on God is founded;</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for All My Hope on God is Founded" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View All My Hope on God is Founded"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share All My Hope on God is Founded"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>O Worship the Lord</h2>
+                            <p class="featured-hymn">O worship the Lord in the beauty of holiness;</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for O Worship the Lord" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View O Worship the Lord"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share O Worship the Lord"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>The Lord in Zion Reigneth</h2>
+                            <p class="featured-hymn">The Lord in Zion reigneth,</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for The Lord in Zion Reigneth" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View The Lord in Zion Reigneth"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share The Lord in Zion Reigneth"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>Praise God, From Whom All Blessings Flow</h2>
+                            <p class="featured-hymn">Praise God, from whom all blessings flow;</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for Praise God, From Whom All Blessings Flow" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View Praise God, From Whom All Blessings Flow"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share Praise God, From Whom All Blessings Flow"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>Let All Things Now Living</h2>
+                            <p class="featured-hymn">Let all things now living</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for Let All Things Now Living" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View Let All Things Now Living"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share Let All Things Now Living"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
+                    <article class="hymn-row">
+                        <span class="hymn-number"></span>
+                        <div class="hymn-details">
+                            <h2>Come, Christians, Join to Sing</h2>
+                            <p class="featured-hymn">Come, Christians, join to sing</p>
+                        </div>
+                        <button class="hymn-actions-toggle" type="button" aria-label="Show actions for Come, Christians, Join to Sing" aria-expanded="false">&rarr;</button>
+                        <div class="hymn-actions">
+                            <a href="#" aria-label="View Come, Christians, Join to Sing"><img src="icons8-open-book-50.png" alt=""><span>View</span></a>
+                            <a href="#" aria-label="Share Come, Christians, Join to Sing"><img src="icons8-share-48.png" alt=""><span>Share</span></a>
+                        </div>
+                    </article>
                 </div>
                 <div class="number-controls">
                     <button class="num-but page-arrow" type="button" aria-label="Move page numbers left">&lt;</button>
@@ -164,8 +221,9 @@
             <div class="footer-text">
                 <p>Music for Today, Hope for Tomorrow.</p>
             </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
