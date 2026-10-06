@@ -183,3 +183,102 @@ span-1 {
     font-size: 18px;
     color: #f8f7f5;
 }
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 768px) {
+    nav {
+        height: 330px;
+        padding: 20px 5%;
+    }
+
+    .nav-brand img {
+        width: 68px;
+        height: 68px;
+        transform: translateY(-12px);
+    }
+
+    .nav-brand h5 {
+        font-size: 14px;
+    }
+
+    .nav-brand span-1 {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 24px;
+        right: 5%;
+        z-index: 3;
+    }
+
+    .menu-toggle span {
+        background-color: #f8f7f5;
+    }
+
+    .menu-toggle.is-open span:first-child {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-open span:last-child {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-actions {
+        margin: 0;
+    }
+
+    .header-links {
+        display: none;
+        position: absolute;
+        top: 78px;
+        right: 5%;
+        z-index: 2;
+        flex-direction: column;
+        gap: 0;
+        min-width: 150px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: #1f4d3a;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+    }
+
+    .header-links.is-open {
+        display: flex;
+    }
+
+    .header-links a {
+        padding: 12px 4px;
+    }
+
+    .nav-header {
+        top: 55%;
+        width: 90%;
+    }
+
+    .nav-header h1 {
+        font-size: 48px;
+    }
+
+    .nav-header p {
+        font-size: 13px;
+    }
+
+    search form {
+        width: 100%;
+    }
+
+    .search-btn {
+        padding: 10px 16px;
+    }
+
+    .main {
+        padding-bottom: 56px;
+    }
+}
