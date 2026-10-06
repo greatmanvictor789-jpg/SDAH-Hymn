@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDAH Hymnal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-brand">
+            <img src="sda white.png" alt="sda-logo" width="100px" height="100px">
+            <h5>Seventh-day <br><span-1>Adventist Hymnal</span-1></h5>
+        </div>
+        <div class="nav-actions">
+            <div class="header-links" id="site-menu">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Resources</a>
+            </div>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-header">
+            <h1>Hymns</h1>
+            <p>A collection of 695 hymns to inspire worship, faith and service.</p>
+            <search>
+                <form action="/search-results" method="GET">
+                    <img src="icons8-search-50.png" alt="black-search-icon" width="20px" height="20px">
+                    <input type="search" id="site-search" name="q"
+                        placeholder="Search by hymn number, title or first line..."
+                        aria-label="Search through site content">
+                    <button class="search-btn" type="submit">Search</button>
+                </form>
+            </search>
+        </div>
+    </nav>
+
+</body>
+
+</html>

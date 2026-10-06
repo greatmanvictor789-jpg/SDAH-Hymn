@@ -322,6 +322,11 @@ span-1 {
     font: 700 14px "Inter", sans-serif;
 }
 
+.hymn-details a {
+    display: contents;
+    text-decoration: none;
+}
+
 .featured-hymn {
     padding: 10px;
     border-bottom: 1px solid rgba(31, 77, 58, .25);
