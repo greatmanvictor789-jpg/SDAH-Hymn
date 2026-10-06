@@ -287,7 +287,6 @@ span-1 {
 .hymn-list {
     display: grid;
     grid-template-columns: 60px minmax(220px, 1fr) minmax(220px, 1fr) 180px;
-    border-top: 1px solid rgba(31, 77, 58, .25);
 }
 
 .hymn-headings {
@@ -296,7 +295,7 @@ span-1 {
 
 .hymn-headings span {
     padding: 10px;
-    border-bottom: 1px solid #1f4d3a;
+    border-bottom: 1px solid rgba(31, 77, 58, .25);
     color: #1f4d3a;
     font: 600 11px "Inter", sans-serif;
 }
@@ -487,6 +486,47 @@ span-1 {
     color: #1f4d3a
 }
 
+.mobile-footer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: #f8f7f5;
+    padding: 8px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.foot-mob {
+    flex: 1;
+    text-align: center;
+}
+
+.foot-mob a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #1f4d3a;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.foot-mob img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.foot-mob p {
+    margin: 0;
+}
+
 /*Mobile Responsive*/
 
 @media only screen and (max-width: 768px) {
@@ -621,7 +661,6 @@ span-1 {
 
     .hymn-list {
         display: block;
-        border-top: 1px solid rgba(31, 77, 58, .25);
     }
 
     .hymn-headings {
@@ -701,7 +740,7 @@ span-1 {
     }
 
     .number-controls {
-        gap: 6px;
+        display: none;
     }
 
     .number-pages {
@@ -709,41 +748,20 @@ span-1 {
     }
 
     .footer {
-        height: auto;
-        min-height: 100px;
-        padding: 16px 5%;
-        flex-wrap: wrap;
-        gap: 10px;
+        height: 0;
+        min-height: 0;
+        padding: 0;
     }
 
-    .footer-brand img {
-        width: 48px;
-        height: 48px;
-        transform: none;
-    }
-
-    .footer-brand h5,
-    .footer-brand span-1 {
-        font-size: 14px;
-    }
-
-    .footer-links {
-        position: static;
-        left: auto;
-        transform: none;
-        gap: 18px;
-    }
-
+    .footer-brand,
     .footer-actions {
-        width: 100%;
-        margin: 0;
-        justify-content: space-between;
-        gap: 10px;
+        display: none;
     }
 
-    .footer-text p {
-        font-size: 11px;
-        text-align: right;
+    .mobile-footer {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: calc(8px + env(safe-area-inset-bottom));
     }
 }
 
