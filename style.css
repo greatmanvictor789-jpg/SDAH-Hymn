@@ -556,3 +556,20 @@ span-1 {
         padding-bottom: calc(8px + env(safe-area-inset-bottom));
     }
 }
+
+@media only screen and (max-width: 420px) {
+    .nav-brand img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .nav-brand h5 {
+        font-size: 18px;
+        transform: translateY(3px);
+    }
+
+    .nav-brand span-1 {
+        font-size: 23px;
+        transform: translateY(3px);
+    }
+}
