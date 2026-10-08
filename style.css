@@ -31,6 +31,10 @@ nav {
     transform: translateY(-35px);
 }
 
+.nav-brand h5 {
+    transform: translateY(6px);
+}
+
 .nav-actions {
     display: flex;
     gap: 50px;
@@ -148,7 +152,7 @@ h5 {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
     color: #f8f7f5;
 }
 
@@ -180,7 +184,7 @@ span-1 {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 18px;
+    font-size: 25px;
     color: #f8f7f5;
 }
 
@@ -196,9 +200,17 @@ span-1 {
 }
 
 .back-link {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     margin: 32px 6% 16px;
     text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 13px;
+    color: #1f4d3a;
 }
 
 .hero {
@@ -229,8 +241,7 @@ span-1 {
     color: #1f4d3a;
 }
 
-.hero p,
-.back-link p {
+.hero p {
     margin-left: 50px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -240,17 +251,12 @@ span-1 {
     color: #1f4d3a;
 }
 
-.back-link p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 .hero h1 {
     font-family: "Cormorant Garamond", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 60px;
+    font-size: 55px;
     color: black;
 }
 
@@ -270,8 +276,8 @@ span-1 {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 14px;
-    color: #1f4d3a;
+    font-size: 12px;
+    color: black;
     margin-left: 0;
 }
 
@@ -434,11 +440,13 @@ span-1 {
     }
 
     .nav-brand h5 {
-        font-size: 14px;
+        font-size: 20px;
+        transform: translateY(6px);
     }
 
     .nav-brand span-1 {
-        font-size: 16px;
+        font-size: 25px;
+        transform: translateY(6px);
     }
 
     .menu-toggle {
@@ -517,10 +525,18 @@ span-1 {
         padding-bottom: 56px;
     }
 
+    .back-link {
+        margin: 24px 5% 16px;
+    }
+
     .hero {
         margin-top: 24px;
         padding: 0 5%;
         gap: 8px;
+    }
+
+    .hero .verses {
+        margin-left: 0;
     }
 
     .footer {

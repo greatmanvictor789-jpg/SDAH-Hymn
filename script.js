@@ -2,14 +2,6 @@ document.querySelectorAll(".hymn-row").forEach(function (row, index) {
     row.querySelector(".hymn-number").textContent = index + 1;
 });
 
-document.querySelectorAll(".hymn-actions-toggle").forEach(function (button) {
-    button.addEventListener("click", function () {
-        var row = button.closest(".hymn-row");
-        var isOpen = row.classList.toggle("is-open");
-        button.setAttribute("aria-expanded", isOpen);
-    });
-});
-
 var rangeContainer = document.querySelector(".hymn-ranges");
 var rangeToggle = rangeContainer.querySelector(".range-more");
 

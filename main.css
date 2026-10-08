@@ -31,6 +31,10 @@ nav {
     transform: translateY(-35px);
 }
 
+.nav-brand h5 {
+    transform: translateY(6px);
+}
+
 .nav-actions {
     display: flex;
     gap: 50px;
@@ -148,7 +152,7 @@ h5 {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
     color: #f8f7f5;
 }
 
@@ -180,7 +184,7 @@ span-1 {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 18px;
+    font-size: 25px;
     color: #f8f7f5;
 }
 
@@ -335,10 +339,6 @@ span-1 {
     font-style: normal;
     font-size: 14px;
     color: #1f4d3a;
-}
-
-.hymn-actions-toggle {
-    display: none;
 }
 
 .hymn-actions {
@@ -546,11 +546,13 @@ span-1 {
     }
 
     .nav-brand h5 {
-        font-size: 14px;
+        font-size: 20px;
+        transform: translateY(6px);
     }
 
     .nav-brand span-1 {
-        font-size: 16px;
+        font-size: 25px;
+        transform: translateY(6px);
     }
 
     .menu-toggle {
@@ -673,7 +675,7 @@ span-1 {
 
     .hymn-row {
         display: grid;
-        grid-template-columns: 32px minmax(0, 1fr) 36px;
+        grid-template-columns: 32px minmax(0, 1fr) auto;
         gap: 8px;
         align-items: center;
         min-height: 70px;
@@ -706,37 +708,10 @@ span-1 {
         color: #52675d;
     }
 
-    .hymn-actions-toggle {
-        display: block;
-        width: 36px;
-        height: 36px;
-        border: 1px solid rgba(31, 77, 58, .35);
-        border-radius: 50%;
-        background: transparent;
-        color: #1f4d3a;
-        cursor: pointer;
-        font-size: 20px;
-    }
-
-    .hymn-actions-toggle[aria-expanded="true"] {
-        transform: rotate(90deg);
-    }
-
-    .hymn-actions {
-        display: none;
-        grid-column: 2 / 4;
-        padding: 0 0 4px;
-        border: 0;
-    }
-
     .hymn-actions a {
         justify-content: center;
         width: 32px;
         height: 32px;
-    }
-
-    .hymn-row.is-open .hymn-actions {
-        display: flex;
     }
 
     .hymn-actions a span {
