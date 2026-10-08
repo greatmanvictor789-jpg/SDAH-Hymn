@@ -708,6 +708,10 @@ span-1 {
         color: #52675d;
     }
 
+    .hymn-actions {
+        border-bottom: 0;
+    }
+
     .hymn-actions a {
         justify-content: center;
         width: 32px;
@@ -755,11 +759,13 @@ span-1 {
     }
 
     .nav-brand h5 {
-        font-size: 12px;
+        font-size: 18px;
+        transform: translateY(3px);
     }
 
     .nav-brand span-1 {
-        font-size: 14px;
+        font-size: 22px;
+        transform: translateY(3px);
     }
 
     .hero .bot,
