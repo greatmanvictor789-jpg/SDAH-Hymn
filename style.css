@@ -282,6 +282,7 @@ span-1 {
 }
 
 .hero .verses {
+    flex-basis: 100%;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -535,7 +536,35 @@ span-1 {
         gap: 8px;
     }
 
+    .hero .title-block {
+        display: contents;
+    }
+
+    .hero h1 {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .hero .about {
+        order: 2;
+        flex-basis: 100%;
+        margin-bottom: 8px;
+    }
+
+    .about-separator {
+        display: none;
+    }
+
+    .music-credit {
+        display: block;
+    }
+
+    .hero .bot {
+        order: 3;
+    }
+
     .hero .verses {
+        order: 4;
         margin-left: 0;
     }
 
