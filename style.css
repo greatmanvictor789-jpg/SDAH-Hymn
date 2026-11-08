@@ -213,6 +213,15 @@ span-1 {
     color: #1f4d3a;
 }
 
+.back-arrow {
+    display: flex;
+    align-items: center;
+}
+
+.back-arrow img {
+    display: block;
+}
+
 .hero {
     display: flex;
     flex-wrap: wrap;
