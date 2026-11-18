@@ -222,6 +222,80 @@ span-1 {
     display: block;
 }
 
+.page-layout {
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    align-items: start;
+    gap: 36px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 5% 80px;
+}
+
+.hymn-sidebar {
+    padding: 20px;
+    background-color: #eae8e3;
+    border-radius: 10px;
+}
+
+.hymn-sidebar .back-link {
+    margin: 0 0 20px;
+}
+
+.hymn-neighbors {
+    display: grid;
+    gap: 10px;
+}
+
+.hymn-neighbor {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5d2cb;
+    border-radius: 7px;
+    background: #f8f7f5;
+    color: #1f4d3a;
+    text-align: left;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+.hymn-neighbor strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.hymn-neighbor[aria-current="page"] {
+    background: #1f4d3a;
+    border-color: #1f4d3a;
+    color: #f8f7f5;
+}
+
+.hymn-neighbor:disabled {
+    cursor: default;
+    opacity: .6;
+}
+
+.page-layout .main {
+    min-width: 0;
+}
+
+.page-layout .hero {
+    margin-top: 0;
+    padding: 0;
+}
+
+.page-layout .hero .text {
+    margin-right: auto;
+}
+
+.lyrics-unavailable {
+    flex-basis: 100%;
+    margin: 16px 0 0 !important;
+    color: #555 !important;
+}
+
 .hero {
     display: flex;
     flex-wrap: wrap;
@@ -438,6 +512,19 @@ span-1 {
 /* Mobile Responsive */
 
 @media only screen and (max-width: 768px) {
+    .page-layout {
+        display: block;
+        padding: 24px 5% 56px;
+    }
+
+    .hymn-sidebar {
+        display: none;
+    }
+
+    .page-layout .hero {
+        padding: 0;
+    }
+
     nav {
         height: 330px;
         padding: 20px 5%;
@@ -533,10 +620,6 @@ span-1 {
 
     .main {
         padding-bottom: 56px;
-    }
-
-    .back-link {
-        margin: 24px 5% 16px;
     }
 
     .hero {

@@ -1,5 +1,24 @@
 document.querySelectorAll(".hymn-row").forEach(function (row, index) {
-    row.querySelector(".hymn-number").textContent = index + 1;
+    var hymnNumber = index + 1;
+    row.querySelector(".hymn-number").textContent = hymnNumber;
+
+    var hymnLink = "page.html?hymn=" + hymnNumber;
+    var title = row.querySelector(".hymn-details h2");
+    var titleLink = title.closest("a");
+
+    if (titleLink) {
+        titleLink.href = hymnLink;
+    } else {
+        var link = document.createElement("a");
+        link.href = hymnLink;
+        title.parentNode.insertBefore(link, title);
+        link.appendChild(title);
+    }
+
+    var viewLink = row.querySelector(".hymn-actions a");
+    if (viewLink) {
+        viewLink.href = hymnLink;
+    }
 });
 
 var rangeContainer = document.querySelector(".hymn-ranges");
